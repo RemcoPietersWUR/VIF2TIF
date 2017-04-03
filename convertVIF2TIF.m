@@ -21,6 +21,8 @@ for frame=1:numel(ConvertFrames)
         IM=rot90(IM,3); %rotate 3x90 degrees
         ddd(frame)=timestamp-StartTimestamp;
         FrameNumber(frame)=timestamp-StartTimestamp+1;
+        %make save directory tiff
+        mkdir(Path,SaveFolder)
         imwrite(IM,[Path,filesep,SaveFolder,filesep,Prefix,'_',num2str(FrameNumber(frame)),'.tif']);
     else
         %Skip frame
