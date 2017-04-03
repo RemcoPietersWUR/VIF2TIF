@@ -77,7 +77,7 @@ for i_seq=1:Nseq
     %Convert VIF to tiff
     FramesRecording_t(i_cam) = StopFrame(i_cam)-StartFrame(i_cam)+1;
     StartTimestamp=timestamp(StartFrame(1,i_cam)+1,i_cam);
-    [ddd,FrameNumber]=convertVIF2TIF(char(PathNameSeq{:,i_cam}),char(FileNameSeq{:,i_cam}),ConvertFrames(:,i_cam),StartTimestamp,AOIWidth,AOIHeight,'\TIF');
+    [ddd,FrameNumber]=convertVIF2TIF(char(PathNameSeq{:,i_cam}),char(FileNameSeq{:,i_cam}),ConvertFrames(:,i_cam),StartTimestamp,AOIWidth,AOIHeight,'TIF');
     end
 end
 
