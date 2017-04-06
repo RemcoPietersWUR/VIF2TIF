@@ -11,7 +11,7 @@ VideoInfo=readtable(fullfile(PathName,[FileName,Ext]));
 %Work per sequence
 Nseq=unique(VideoInfo.Sequence);
 row=1;
-for i_seq=1:Nseq
+for i_seq=1:numel(Nseq)
     Ncam=numel(find(VideoInfo.Sequence==i_seq));
     %Preallocate timestamp array, assumption all recordings in same
     %sequences have the same frame number per recording
